@@ -1,0 +1,9 @@
+{
+    "title": "LANGUAGE-AGNOSTIC DESIGN RESEARCH",
+    "color": "#EEEEEE",
+    "textColor": "#1E1E1E",
+    "buttonColor": "#FBFBFB",
+    "body": "Due to a lack of safety and regulation in the small-scale fishing sector, a communication tool with a reporting feature catered towards small-scale fishers was proposed. Research was conducted on language-agnostic design and cultural differences in semiotics as a preliminary dive into the requirements for an often understudied user pool.",
+    "implementation": ["Figma"],
+    "research": ["Comparative Analysis", "Interviews", "Thematic Analysis"]
+}

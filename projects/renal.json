@@ -1,6 +1,8 @@
 {
     "title": "RENAL DISEASE INFORMATION HUB",
     "color": "#61874D",
+    "textColor": "#FFFFFF",
+    "buttonColor": "#FBFBFB",
     "body": "Information on renal disease for researchers is often unorganized and uncollated. The Gene Profiler web application provides various resources on kidney disease in a central location. It has additional functionality affording production of genetic reports and statistical analysis on target data. In this way, it assists wet-lab biologists in better investigating disease-correlated genes.",
     "implementation": ["JavaScript", "HTML", "CSS"],
     "research": ["Focus Groups", "Heuristic Evaluation", "Cognitive Walkthroughs", "Log File Analysis"]

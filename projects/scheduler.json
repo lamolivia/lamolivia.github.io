@@ -1,6 +1,8 @@
 {
     "title": "SHIFT SCHEDULING TOOL",
     "color": "#1CBFFF",
+    "textColor": "#FFFFFF",
+    "buttonColor": "#FBFBFB",
     "body": "The Sprouts Scheduler is an interface aimed at helping Sprouts volunteers schedule their shifts on one easy-to-use webpage. UBC Sprouts is a volunteer organization aimed at providing sustainable, affordable food to both students and the local community. It was essential for us to minimize time spent organizing shifts, so that volunteers could redirect their time to their many other responsibilities.",
     "implementation": ["JavaScript", "React"],
     "research": ["Persona Mapping", "Interviews", "Thematic Analysis", "Cognitive Walkthroughs", "Usability Testing", "Statistical Analysis"]

@@ -12,20 +12,34 @@ const bookScale = (windowCtx) => {
   }
 };
 
+const modalSize = (windowCtx, bWidth, bHeight) => {
+  const winW = windowCtx.w;
+  const winH = windowCtx.h;
+  const whRatio = bWidth / bHeight;
+
+  const isMobile = winW < 690;
+  let maxWidth = isMobile ? winW - 50 : winW / 2 - 30;
+  maxWidth = maxWidth > 620 ? 620 : maxWidth;
+  let maxHeight = winH - 30;
+
+  if ((maxWidth / whRatio) < maxHeight) {
+    return [maxWidth, maxWidth / whRatio];
+  } else {
+    return [maxHeight * whRatio, maxHeight];
+  }
+
+}
+
 const Book = ({ pdf, cover, width, height }) => {
   const [isOpen, setIsOpen] = useState(false);
   const bookRef = useRef(null);
   const coverImage = { backgroundImage: `url(${cover})` };
 
   const windowCtx = useWindowContext();
-  const isMobile = windowCtx.w < 690;
   const scale = bookScale(windowCtx);
 
   const bookSize = { width: scale * width, height: scale * height };
-
-  let modalWidth = isMobile ? windowCtx.w - 50 : windowCtx.w / 2 - 30;
-  modalWidth = modalWidth > 620 ? 620 : modalWidth;
-  const modalHeight = (height / width) * modalWidth;
+  const [modalWidth, modalHeight] = modalSize(windowCtx, width, height);
 
   return (
     <div>

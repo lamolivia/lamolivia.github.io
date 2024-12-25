@@ -2,11 +2,12 @@ import "./App.css";
 import Project from "./components/Project";
 import About from "./components/About";
 import BookStack from "./components/BookStack";
-import VideoProject from "./components/VideoProject";
+import SlideProject from "./components/SlideProject";
 import Contact from "./components/Contact";
 import stem from "../projects/stem.json";
 import scheduler from "../projects/scheduler.json";
 import renal from "../projects/renal.json";
+import fish from "../projects/fish.json";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Project component={<BookStack />} isLeft={false} data={stem} />
       <Project
         component={
-          <VideoProject
+          <SlideProject
             width="560"
             height="315"
             src="https://www.youtube.com/embed/M0k2UmY-Yts?si=qWuWjnU6QI4U7Fod"
@@ -27,12 +28,26 @@ function App() {
             ]}
           />
         }
+        reportSrc="/sprouts.pdf"
         isLeft={true}
         data={scheduler}
       />
       <Project
         component={
-          <VideoProject
+          <SlideProject
+            width="560"
+            height="315"
+            name="fish"
+            imgList={["/img/fish1.png", "/img/fish2.png", "/img/fish3.png"]}
+          />
+        }
+        reportSrc="/fish.pdf"
+        isLeft={false}
+        data={fish}
+      />
+      <Project
+        component={
+          <SlideProject
             width="560"
             height="315"
             name="gene"
@@ -40,7 +55,7 @@ function App() {
             imgList={["/img/gene1.png", "/img/gene2.png", "/img/gene3.png"]}
           />
         }
-        isLeft={false}
+        isLeft={true}
         data={renal}
       />
       <Contact />
